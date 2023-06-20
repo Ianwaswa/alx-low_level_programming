@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- * main - entry int of my code
- * return: always 0, success
+ * main - entry point of my code
+ * Return: always 0, success
  * C- functions, nested loops
  */
 int main(void)
