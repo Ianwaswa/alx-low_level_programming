@@ -6,10 +6,10 @@
  * Return: 1 for upper letter or 0 for any other thing
  */
 
-int _isupper(int x)
+int _isupper(int X)
 
 {
-	if (x >= && x <= 90)
+	if (X >= && X <= 90)
 	{
 		return (1);
 	}
