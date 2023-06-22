@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * mul - Multiplies two integers
  * @a: The first number to multiply
@@ -6,7 +7,7 @@
  * Return: The result of multiplication between x param and y param
  */
 
-int _mul(int a, int b)
+int mul(int a, int b)
 
 {
 	return (a * b);
