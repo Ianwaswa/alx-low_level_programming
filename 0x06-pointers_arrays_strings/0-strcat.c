@@ -5,7 +5,7 @@
  * _strcat - Concatenates two strings
  * @dest: The destination string
  * @src: The source string
- * Rreturn: A pointer to the resulting string dest
+ * Return: A pointer to the resulting string dest
  */
 
 char *_strcat(char *dest, char *src)
@@ -17,6 +17,7 @@ char *_strcat(char *dest, char *src)
 	{
 		dlen++;
 	}
+
 
 	for (i = 0; src[i] != 0; i++)
 	{
