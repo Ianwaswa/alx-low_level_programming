@@ -7,9 +7,11 @@
  */
 void _puts_recursion(char *str)
 {
-	char str[] = "My string";
-
-	_putchar("%s\n", str);
-
-	return (0);
+	if (*str)
+	{
+		_putchar(*str);
+		_puts_recursion(s + 1);
+	}
+	else
+		_putchar('\n');
 }
