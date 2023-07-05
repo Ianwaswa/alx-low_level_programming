@@ -5,7 +5,7 @@
  * @str: string
  * Return: 0 always
  */
-void _puts_recursion(char str)
+void _puts_recursion(char *str)
 {
 	char str[] = "My string";
 
