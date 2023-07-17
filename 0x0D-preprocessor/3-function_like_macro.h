@@ -1,4 +1,4 @@
-#ifndef ABSOLUTE
-#define ABSOLUTE
-#define ABS(X) ((X < 0) ? (-X) : (X))
-#endif
+#ifndef _FUNC_LIKE_MACRO_H
+#define _FUNC_LIKE_MACRO_H
+#define ABS(x) (((x) < 0) ? -(x) : (x))
+#endif /* _FUNC_LIKE_MACRO_H */
