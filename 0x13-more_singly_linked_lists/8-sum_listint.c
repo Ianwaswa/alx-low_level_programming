@@ -3,7 +3,7 @@
 
 /**
  * sum_listint - returns the sum of all the data
- * 
+ * listint_t -  list
  * @head: pointer
  * Return: sum of list
  */
@@ -22,5 +22,6 @@ int sum_listint(listint_t *head)
 		sum += current->n;
 		current = current->next;
 	}
+
 	return (sum);
 }
