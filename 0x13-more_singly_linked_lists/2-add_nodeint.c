@@ -6,7 +6,7 @@
  * 
  * @head: A pointer to the address of the head of the list
  * @n: The integer for the new node to have
- *
+ * listint_t: list
  * Return: NULL; If the function fails, Otherwise - the address of the new element.
  */
 listint_t *add_nodeint(listint_t **head, const int n)
