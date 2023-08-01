@@ -4,6 +4,7 @@
 /**
  * delete_nodeint_at_index - Deletes the node at a given index of the list
  * @head: A pointer
+ * listint_t: list
  * @index: The index of the node to be deleted - indices start at 0.
  *
  * Return: On success 1 and on failure -1
