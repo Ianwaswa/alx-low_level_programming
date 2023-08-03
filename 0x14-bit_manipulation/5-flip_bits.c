@@ -6,7 +6,7 @@
  * @n: number one
  *
  * @m: number two
- *
+ * nbits: bit
  * Return: number of bits
  */
 
