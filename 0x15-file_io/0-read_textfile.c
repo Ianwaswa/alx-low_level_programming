@@ -1,18 +1,18 @@
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <sys/uio.h>
-#include <unistd.h>
-#include <fcntl.h>
+#include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
- * read_textfile - reads a text file and prints the contents to STDOUT
- * @filename: the filename to open
- * @letters: number of letters to read and print
+ * read_textfile - reads a text file and prints the contents to POSIX STDOUT
+ * @filename: filename to open
  *
- * Return: the number of letters read and printed, 0 on failure
+ * @letters: number of letters to read then print
+ *
+ * Return: the number of letters read and printed, else print 0
  */
+
 ssize_t read_textfile(const char *filename, size_t letters)
+
 {
 	int fd = -1, err = 0, len = 0;
 	char *temp_b;
@@ -41,5 +41,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	close(fd);
 	if (err < 0)
 		return (0);
+
 	return ((ssize_t)err);
 }
