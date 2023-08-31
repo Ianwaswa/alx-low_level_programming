@@ -10,24 +10,30 @@
  */
 
 unsigned int binary_to_uint(const char *b)
-
 {
-	unsigned int dec = 0;
-	int i, base;
+	unsigned int uint, place;
+	int n;
 
-	if (b == NULL)
+	if (!b)
 		return (0);
 
-	for (i = 0; b[i] != '\0'; ++i)
+	for (n = 0; b[n]; n++)
 		;
-
-	for (--i, base = 1; i >= 0; --i, base *= 2)
+	n--;
+	for (place = 1, uint = 0; n >= 0; n--)
 	{
-		if (b[i] != '0' && b[i] != '1')
-			return (0);
-
-		if (b[i] & 1)
-			dec += base;
+		if (b[n] == '0')
+		{
+			place *= 2;
+			continue;
+		}
+		else if (b[n] == '1')
+		{
+			uint += place;
+			place *= 2;
+			continue;
+		}
+		return (0);
 	}
-	return (dec);
+	return (uint);
 }
