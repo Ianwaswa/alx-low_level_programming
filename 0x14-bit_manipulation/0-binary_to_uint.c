@@ -1,14 +1,9 @@
 #include "main.h"
-#include <stdlib.h>
-#include <stdio.h>
-
 /**
- * binary_to_uint - converts a binary number to unsigned int
- * @b: pointer to a string of 0 and 1
- *
- * Return: the converted number or 0 if there is one or more characters in the string b that is not 0 or 1, or if b is NULL
- */
-
+  * binary_to_uint - converts a binary number to an unsigned int
+  * @b: binary number
+  * Return: the converted number or 0 if it fails
+  */
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int uint, place;
