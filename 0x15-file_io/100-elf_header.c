@@ -1,3 +1,8 @@
+/*
+ * File: 100-elf_header.c
+ * Auth: Brennan D Baraban
+ */
+
 #include <elf.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -27,7 +32,7 @@ void check_elf(unsigned char *e_ident)
 {
 	int index;
 
-		for (index = 0; index < 4; index++)
+	for (index = 0; index < 4; index++)
 	{
 		if (e_ident[index] != 127 &&
 		    e_ident[index] != 'E' &&
@@ -249,9 +254,7 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident)
  *
  * Description: If the file cannot be closed - exit code 98.
  */
-
 void close_elf(int elf)
-
 {
 	if (close(elf) == -1)
 	{
@@ -262,13 +265,15 @@ void close_elf(int elf)
 }
 
 /**
- * main - Displays the information contained in the ELF header at the start of an ELF file.
+ * main - Displays the information contained in the
+ *        ELF header at the start of an ELF file.
  * @argc: The number of arguments supplied to the program.
  * @argv: An array of pointers to the arguments.
  *
- * Return: 0 on success
+ * Return: 0 on success.
  *
- * Description: If the file is not an ELF File the function fails - exit code 98.
+ * Description: If the file is not an ELF File or
+ *              the function fails - exit code 98.
  */
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
