@@ -1,19 +1,18 @@
 #include "search_algos.h"
 
 /**
- * print_array - Display the elements of an array separated by commas
+ * print_array - prints the array of ints, separated with commas
  *
- * @array: Pointer to the array to print
- * @first: The index of the first element to print
- * @last: The index of the last element to print
+ * @array: a pointer to the array to print
+ * @first: the first index to print
+ * @last: the last index to print
  */
 
 void print_array(int *array, size_t first, size_t last)
-
 {
 	size_t i;
 
-	printf("Searching in the array: ");
+	printf("Searching in array: ");
 	for (i = first; i <= last; i++)
 	{
 		if (i != first)
@@ -24,17 +23,16 @@ void print_array(int *array, size_t first, size_t last)
 }
 
 /**
- * binary_search - Search for a value in a sorted array using the binary search algorithm
+ * binary_search - searches for a value in an array of integers
  *
- * @array: Pointer to the first element of the array to search in
- * @size: The number of elements in the array
- * @value: The value to search for
+ * @array: a pointer to the first element of the array to search in
+ * @size: the number of elements in array
+ * @value: the value to search for
  *
- * Return: The index where the value is located or -1 if not found
+ * Return: the index where value is located or -1 on failure or not found
  */
 
 int binary_search(int *array, size_t size, int value)
-
 {
 	size_t i = 0, first = 0, last = size - 1;
 
@@ -43,17 +41,16 @@ int binary_search(int *array, size_t size, int value)
 		while (first <= last)
 		{
 			print_array(array, first, last);
-			i = (first + last) / 2; /* Determine the middle index */
+			i = (first + last) / 2; /* Gets the middle value */
 
-			if (value > array[i]) /* If value is in the right half of the array */
+			if (value > array[i]) /* Uses the right part of array */
 				first = i + 1;
-			else if (value < array[i]) /* If value is in the left half of the array */
+			else if (value < array[i]) /* Uses the left part of array */
 				last = i - 1;
-			else /* If value is found */
+			else
 				return (i);
 		}
 	}
 
 	return (-1);
 }
-
